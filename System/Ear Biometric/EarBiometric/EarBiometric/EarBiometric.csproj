@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D57FB52F-F669-4264-A161-55CF93CE7B9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EarBiometric</RootNamespace>
+    <AssemblyName>EarBiometric</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>C:\Emgu\emgucv-windesktop 3.3.0.2824\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>C:\Emgu\emgucv-windesktop 3.3.0.2824\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="administrator_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator_login.Designer.cs">
+      <DependentUpon>administrator_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ear_capture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ear_capture.Designer.cs">
+      <DependentUpon>ear_capture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ear_process.cs" />
+    <Compile Include="ear_scanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ear_scanner.Designer.cs">
+      <DependentUpon>ear_scanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ear_structure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ear_structure.Designer.cs">
+      <DependentUpon>ear_structure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeparments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeparments.Designer.cs">
+      <DependentUpon>FormDeparments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEarProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEarProcess.Designer.cs">
+      <DependentUpon>FormEarProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEPGlobal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEPGlobal.Designer.cs">
+      <DependentUpon>FormEPGlobal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManualLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManualLogin.Designer.cs">
+      <DependentUpon>FormManualLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReactor.Designer.cs">
+      <DependentUpon>FormReactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchedules.Designer.cs">
+      <DependentUpon>FormSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimeline.Designer.cs">
+      <DependentUpon>FormTimeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_user_identified.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_user_identified.Designer.cs">
+      <DependentUpon>form_user_identified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="global_arguments.cs" />
+    <Compile Include="manage_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_users.Designer.cs">
+      <DependentUpon>manage_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="sql_connection.cs" />
+    <EmbeddedResource Include="administrator_login.resx">
+      <DependentUpon>administrator_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ear_capture.resx">
+      <DependentUpon>ear_capture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ear_scanner.resx">
+      <DependentUpon>ear_scanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ear_structure.resx">
+      <DependentUpon>ear_structure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeparments.resx">
+      <DependentUpon>FormDeparments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEarProcess.resx">
+      <DependentUpon>FormEarProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEPGlobal.resx">
+      <DependentUpon>FormEPGlobal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManualLogin.resx">
+      <DependentUpon>FormManualLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReactor.resx">
+      <DependentUpon>FormReactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchedules.resx">
+      <DependentUpon>FormSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimeline.resx">
+      <DependentUpon>FormTimeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_user_identified.resx">
+      <DependentUpon>form_user_identified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_users.resx">
+      <DependentUpon>manage_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-with-tie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smct_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cancel %281%29.png" />
+    <None Include="Resources\man-with-tie1.png" />
+    <None Include="Resources\medal %283%29.png" />
+    <None Include="Resources\timer.png" />
+    <None Include="Resources\ear_white_64x64.png" />
+    <None Include="Resources\ear %2811%29.png" />
+    <None Include="Resources\settings-cog %281%29.png" />
+    <None Include="Resources\ear %287%29.png" />
+    <None Include="Resources\padlock %284%29.png" />
+    <None Include="Resources\padlock %282%29.png" />
+    <None Include="Resources\man-with-tie %284%29.png" />
+    <None Include="Resources\ear %288%29.png" />
+    <None Include="Resources\cancel %281%291.png" />
+    <None Include="Resources\checked %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
